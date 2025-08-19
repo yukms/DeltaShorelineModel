@@ -48,6 +48,7 @@ def create_input_widget(label, min_val, max_val, default_val, step, key, help_te
 # ----------------------
 st.set_page_config(layout="wide")
 st.title("🌊 Shoreline & Sea Level Box Model: Scenario Comparison")
+
 st.markdown(r"""
 Create complex sea-level scenarios by combining Linear and optional Sinusoidal components.
 Analyze the resulting shoreline changes from three different perspectives.
