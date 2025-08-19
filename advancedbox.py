@@ -96,7 +96,7 @@ def scenario_controls(scenario_num):
     with st.expander("Slope Parameters", expanded=False):
         S_t = create_input_widget("Topset Slope ($S_t$)", 0.001, 0.1, 0.01 if scenario_num == 1 else 0.01, 0.001, f"St{scenario_num}")
         S_f = create_input_widget("Foreset Slope ($S_f$)", 0.01, 1.0, 0.1 if scenario_num == 1 else 0.1, 0.01, f"Sf{scenario_num}")
-        S_b = create_input_widget("Basement Slope ($S_b$)", 0.001, 0.1, 0.005 if scenario_num == 1 else 0.005, 0.001, f"Sb{scenario_num}")
+        S_b = create_input_widget("Basement Slope ($S_b$)", 0.05, 0.1, 0.005 if scenario_num == 1 else 0.005, 0.001, f"Sb{scenario_num}")
 
     with st.expander("Sea Level Change Parameters", expanded=False):
         Z0 = create_input_widget("Initial Water Depth ($Z_0$)", 1.0, 100.0, 1.0, 0.5, f"Z0{scenario_num}")
