@@ -55,32 +55,6 @@ streamlit run advancedbox.py
 - **Live Demo**: https://shorelinemodel.streamlit.app
 - **Repository**: https://github.com/yukms/SimpleDeltaShorelineModel
 
-## 📊 Default Parameters
-
-### Simple Model
-- Sediment Supply (Qs): 250
-- Simulation Time: 100
-- Sea Level Rate (Żdot): 0.3
-
-### Advanced Model
-- Topset Slope: 0.01
-- Foreset Slope: 0.2
-- Basement Slope: 0.05
-- Plus all simple model parameters
-
-## 🎓 Educational Applications
-
-- **Coastal Geomorphology**: Understanding shoreline response to environmental changes
-- **Sedimentology**: Exploring sediment transport and deposition processes
-- **Climate Science**: Investigating sea-level change impacts
-- **Numerical Modeling**: Learning basic box model concepts
-
-## 🔬 Research Applications
-
-- **Scenario Testing**: Rapid exploration of different forcing conditions
-- **Parameter Sensitivity**: Understanding model response to input variations
-- **Conceptual Development**: Building intuition for complex coastal systems
-- **Teaching Tool**: Interactive demonstrations for students and colleagues
 
 ## 📁 Project Structure
 
@@ -99,15 +73,6 @@ SimpleDeltaShorelineModel/
 - **Visualization**: Plotly for interactive graphs
 - **State Management**: Session state for widget synchronization
 
-## 📈 Model Equations
-
-### Simple Box Model
-```
-X(t) = Qs × t / η(t)
-```
-
-### Advanced Slope Model
-Incorporates geometric relationships between topset (St), foreset (Sf), and basement (Sb) slopes with constraint validation: `St < Sb < Sf`
 
 ---
 
