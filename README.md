@@ -54,8 +54,9 @@ streamlit run advancedbox.py
 ```
 
 ### Online Access
-- **Live Demo**: https://shorelinemodel.streamlit.app
-- **Repository**: https://github.com/yukms/SimpleDeltaShorelineModel
+- **Simple Model Demo**: https://shoreline-model-simple.streamlit.app/
+- **Advanced Model Demo**: https://shoreline-model-advanced.streamlit.app/
+- **Repository**: https://github.com/yukms/DeltaShorelineModel
 
 
 ## 📁 Project Structure

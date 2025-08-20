@@ -23,25 +23,31 @@ def create_input_widget(label, min_val, max_val, default_val, step, key, help_te
     if not help_text:
         help_text = f"Range: {min_val} to {max_val}"
     
-    # Initialize session state
-    if f"{key}_value" not in st.session_state:
-        st.session_state[f"{key}_value"] = default_val
-    
+    # Initialize session state or validate existing value
+    session_key = f"{key}_value"
+    if session_key not in st.session_state:
+        st.session_state[session_key] = default_val
+    else:
+        # Validate the stored value against current bounds, reset if out of bounds
+        current_value = st.session_state[session_key]
+        if not (min_val <= current_value <= max_val):
+            st.session_state[session_key] = default_val
+            
     # Slider updates session state
     slider_val = st.slider(
-        label, min_value=min_val, max_value=max_val, value=st.session_state[f"{key}_value"],
+        label, min_value=min_val, max_value=max_val, value=st.session_state[session_key],
         step=step, key=f"{key}_slider", label_visibility="collapsed", help=help_text,
-        on_change=lambda: setattr(st.session_state, f"{key}_value", st.session_state[f"{key}_slider"])
+        on_change=lambda: setattr(st.session_state, session_key, st.session_state[f"{key}_slider"])
     )
     
     # Number input updates session state  
     num_input = st.number_input(
-        label, min_value=min_val, max_value=max_val, value=st.session_state[f"{key}_value"],
+        label, min_value=min_val, max_value=max_val, value=st.session_state[session_key],
         step=step, key=f"{key}_num", label_visibility="collapsed", help=help_text,
-        on_change=lambda: setattr(st.session_state, f"{key}_value", st.session_state[f"{key}_num"])
+        on_change=lambda: setattr(st.session_state, session_key, st.session_state[f"{key}_num"])
     )
     
-    return st.session_state[f"{key}_value"]
+    return st.session_state[session_key]
 
 # ----------------------
 # Streamlit UI
