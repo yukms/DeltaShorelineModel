@@ -54,19 +54,20 @@ streamlit run advancedbox.py
 ```
 
 ### Online Access
+- **Hugging Face Space**: https://huggingface.co/spaces/yukms/DeltaShorelineModel
 - **Simple Model Demo**: https://shoreline-model-simple.streamlit.app/
 - **Advanced Model Demo**: https://shoreline-model-advanced.streamlit.app/
 - **Repository**: https://github.com/yukms/DeltaShorelineModel
 
-
 ## 📁 Project Structure
 
 ```
-SimpleDeltaShorelineModel/
-├── simplebox.py          # Simple box model application
-├── advancedbox.py        # Advanced slope model application
-├── requirements.txt      # Python dependencies
-└── README.md            # This file
+DeltaShorelineModel/
+├── app.py               # Hugging Face Spaces main app
+├── simplebox.py         # Simple box model application
+├── advancedbox.py       # Advanced slope model application
+├── requirements.txt     # Python dependencies
+└── README.md           # This file
 ```
 
 ## 🛠️ Technical Details
@@ -75,7 +76,6 @@ SimpleDeltaShorelineModel/
 - **Computation**: NumPy for numerical calculations
 - **Visualization**: Plotly for interactive graphs
 - **State Management**: Session state for widget synchronization
-
 
 ---
 
